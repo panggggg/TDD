@@ -6,14 +6,14 @@
 
 def fizzbuzz(num):
 
-    # if num % 15 == 0:
-    #     return "fizzbuzz"
-    # if num % 3 == 0:
-    #     return "fizz"
-    # if num % 5 == 0:
-    #     return "buzz"
-    # if num % 2 == 0:
-    #     return "bang"
+    if num % 15 == 0:
+        return "fizzbuzz"
+    if num % 3 == 0:
+        return "fizz"
+    if num % 5 == 0:
+        return "buzz"
+    if num % 2 == 0:
+        return "bang"
     return str(num)
 
 
