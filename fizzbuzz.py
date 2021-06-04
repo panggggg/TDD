@@ -7,15 +7,32 @@
 
 def fizzbuzz(num):
 
-    result = str(num)
-    if num % 3 == 0:
+    result = get_result_buzz(num, str(num))
+    if is_divide_by_three(num):
         result = "fizz"
-    if num % 5 == 0:
-        result = "buzz"
-    if num % 3 == 0 and num % 5 == 0:
-        result = "fizzbuzz"
+        result += get_result_buzz(num, "")
 
     return result
+
+
+def is_divide_by_three(num):
+    return num % 3 == 0
+
+
+def get_result_buzz(num, default):
+
+    result = ["buzz", default, default, default, default]
+
+    return result[num % 5]
+
+    # result = [
+    #     "buzz",
+    #     default,
+    #     default,
+    #     default,
+    #     default,
+    # ]
+    # return result[num % 5]
 
 
 #     if num % 15 == 0:
