@@ -2,21 +2,21 @@ class Diamond:
     def print_diamond(self, charecter):
         pass
 
-    def print_left_and_right_space(self, charecter):
+    def print_right_space(self, charecter):
 
         if charecter == "A":
-            list_left_space = [0]
+            right_space = ""
 
         if charecter == "B":
-            list_left_space = [0, 1]
+            right_space = "\n."
 
         if charecter == "C":
-            list_left_space = [0, 1, 2]
+            right_space = "\n.\n.."
 
         if charecter == "D":
-            list_left_space = [0, 1, 2, 3]
+            right_space = "\n.\n..\n..."
 
-        return list_left_space
+        return right_space
 
     def print_middle_space(self, charecter):
         if charecter == "A":
