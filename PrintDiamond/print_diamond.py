@@ -2,20 +2,34 @@ class Diamond:
     def print_diamond(self, charecter):
         pass
 
-    def print_right_space(self, charecter):
+    def print_left_space(self, charecter):
 
+        if charecter == "A":
+            left_space = ""
+
+        if charecter == "B":
+            left_space = ".\n"
+
+        if charecter == "C":
+            left_space = "..\n.\n"
+
+        if charecter == "D":
+            left_space = "...\n..\n.\n"
+
+        return left_space
+
+    def print_right_space(self, charecter):
         if charecter == "A":
             right_space = ""
 
         if charecter == "B":
-            right_space = "\n."
+            right_space = ".\n"
 
         if charecter == "C":
-            right_space = "\n.\n.."
+            right_space = "..\n .\n"
 
         if charecter == "D":
-            right_space = "\n.\n..\n..."
-
+            right_space = "...\n ..\n .\n"
         return right_space
 
     def print_middle_space(self, charecter):
