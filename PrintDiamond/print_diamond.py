@@ -34,14 +34,30 @@ class Diamond:
 
     def print_middle_space(self, charecter):
         if charecter == "A":
-            list_left_space = [0]
+            middle_space = ""
 
         if charecter == "B":
-            list_left_space = [0, 1]
+            middle_space = [0, 1]
 
         if charecter == "C":
-            list_left_space = [0, 1, 3]
+            middle_space = [0, 1, 3]
 
         if charecter == "D":
-            list_left_space = [0, 1, 3, 5]
-        return list_left_space
+            middle_space = [0, 1, 3, 5]
+        return middle_space
+
+    def count_space(self, charecter, type, line):
+
+        if type == "middle":
+            if line == 1:
+                return 0
+            if charecter == "C" and line == 4:
+                return 1
+            if charecter == "D" and line == 5:
+                return 3
+            if charecter == "D" and line == 6:
+                return 1
+            if charecter == "E" and line == 6:
+                return 5
+            return (line - 2) * 2 + 1
+        return ord(charecter) - 65
