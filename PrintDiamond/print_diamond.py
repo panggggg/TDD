@@ -8,9 +8,13 @@ class Diamond:
         if type == "middle":
             return self.count_middle(line=line, number_of_charecter=number_of_charecter)
         else:
-            return self.count_left(number_of_charecter=number_of_charecter)
+            return self.count_left(
+                number_of_charecter=number_of_charecter, line=line, charecter=charecter
+            )
 
-    def count_left(self, number_of_charecter):
+    def count_left(self, line, number_of_charecter, charecter):
+        if line - number_of_charecter > 0:
+            return line - number_of_charecter
         return number_of_charecter - 1
 
     def count_middle(self, line, number_of_charecter):
