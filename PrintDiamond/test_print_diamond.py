@@ -21,6 +21,26 @@ class TestPrintDiamond(unittest.TestCase):
         actual = self.diamond.count_space(charecter="C", type="left", line=1)
         self.assertEquals(expected, actual)
 
+    def test_count_space_push_C_left_line_4(self):
+        expected = 1
+        actual = self.diamond.count_space(charecter="C", type="left", line=4)
+        self.assertEquals(expected, actual)
+
+    def test_count_space_push_C_left_line_5(self):
+        expected = 2
+        actual = self.diamond.count_space(charecter="C", type="left", line=5)
+        self.assertEquals(expected, actual)
+
+    def test_count_space_push_E_left_line_6(self):
+        expected = 1
+        actual = self.diamond.count_space(charecter="E", type="left", line=6)
+        self.assertEquals(expected, actual)
+
+    def test_count_space_push_E_left_line_7(self):
+        expected = 2
+        actual = self.diamond.count_space(charecter="E", type="left", line=7)
+        self.assertEquals(expected, actual)
+
     def test_count_space_push_C_middle_line_1(self):
         expected = 0
         actual = self.diamond.count_space(charecter="C", type="middle", line=1)
