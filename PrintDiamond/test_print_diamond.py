@@ -92,6 +92,6 @@ class TestPrintDiamond(unittest.TestCase):
         self.assertEquals(expected, actual)
 
     def test_print_diamond_push_A_line_1(self):
-        expected = "0A0"
+        expected = "A"
         actual = self.diamond.count_space(charecter="A")
         self.assertEquals(expected, actual)
