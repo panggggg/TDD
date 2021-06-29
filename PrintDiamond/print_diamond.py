@@ -4,6 +4,8 @@ class Diamond:
             return "A"
         if charecter == "B" and line == 2:
             return "B.B"
+        if charecter == "B" and line == 3:
+            return ".A."
 
     def count_space(self, charecter, type, line):
 
