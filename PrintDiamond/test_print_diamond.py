@@ -103,6 +103,11 @@ class TestPrintDiamond(unittest.TestCase):
         actual = self.diamond.print_diamond(charecter="B", line=1)
         self.assertEquals(expected, actual)
 
+    def test_print_diamond_push_B_line_2(self):
+        expected = "B.B"
+        actual = self.diamond.print_diamond(charecter="B", line=2)
+        self.assertEquals(expected, actual)
+
     def test_print_diamond_push_C_line_1(self):
         expected = "A"
         actual = self.diamond.print_diamond(charecter="C", line=1)
