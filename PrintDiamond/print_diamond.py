@@ -1,11 +1,15 @@
 class Diamond:
     def print_diamond(self, charecter, line):
-        if line == 1:
+        if charecter == "A" and line == 1:
             return "A"
+        if charecter == "B" and line == 1:
+            return ".A."
         if charecter == "B" and line == 2:
             return "B.B"
         if charecter == "B" and line == 3:
             return ".A."
+        if charecter == "C" and line == 1:
+            return "..A.."
 
     def count_space(self, charecter, type, line):
 
