@@ -5,10 +5,6 @@ class Diamond:
 
         if charecter == "A" and line == 1:
             return str((ord(charecter) - 64) - 1) + "A" + str((ord(charecter) - 64) - 1)
-        # if charecter == "B" and line == 1:
-        #     return ".A."
-        # if charecter == "B" and line == 2:
-        #     return "B.B"
         if charecter == "B" and line == 3:
             return str((ord(charecter) - 64) - 1) + "A" + str((ord(charecter) - 64) - 1)
         if charecter == "C" and line == 1:
