@@ -1,4 +1,5 @@
 import unittest
+from unittest.case import expectedFailure
 from print_diamond import Diamond
 
 
@@ -94,31 +95,21 @@ class TestPrintDiamond(unittest.TestCase):
     ##########################################################################################
 
     def test_print_diamond_push_A_line_1(self):
-        expected = "A"
+        expected = "0A0"
         actual = self.diamond.print_diamond(charecter="A", line=1)
         self.assertEquals(expected, actual)
 
     def test_print_diamond_push_B_line_1(self):
-        expected = ".A."
+        expected = "1A1"
         actual = self.diamond.print_diamond(charecter="B", line=1)
         self.assertEquals(expected, actual)
 
-    def test_print_diamond_push_B_line_2(self):
-        expected = "B.B"
-        actual = self.diamond.print_diamond(charecter="B", line=2)
-        self.assertEquals(expected, actual)
-
-    def test_print_diamond_push_B_line_3(self):
-        expected = ".A."
-        actual = self.diamond.print_diamond(charecter="B", line=3)
-        self.assertEquals(expected, actual)
-
     def test_print_diamond_push_C_line_1(self):
-        expected = "..A.."
+        expected = "2A2"
         actual = self.diamond.print_diamond(charecter="C", line=1)
         self.assertEquals(expected, actual)
 
     def test_print_diamond_push_D_line_1(self):
-        expected = "...A..."
+        expected = "3A3"
         actual = self.diamond.print_diamond(charecter="D", line=1)
         self.assertEquals(expected, actual)
