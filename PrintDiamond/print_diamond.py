@@ -2,10 +2,9 @@ class Diamond:
     def print_diamond(self, charecter, line):
 
         line_of_diamond = (ord(charecter) - 64) - (1 - (ord(charecter) - 64))
-        first_line = (
-            str((ord(charecter) - 64) - 1) + "A" + str((ord(charecter) - 64) - 1)
-        )
-        return first_line
+        first_line = str((ord(charecter) - 64) - 1)
+        space = "." * int(first_line)
+        return f"{space}A{space}"
 
     def count_space(self, charecter, type, line):
 
