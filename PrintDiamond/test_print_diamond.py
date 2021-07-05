@@ -95,21 +95,26 @@ class TestPrintDiamond(unittest.TestCase):
     ##########################################################################################
 
     def test_print_diamond_push_A_line_1(self):
-        expected = "0A0"
-        actual = self.diamond.print_diamond(charecter="A", line=1)
+        expected = "A"
+        actual = self.diamond.print_diamond(charecter="A")
         self.assertEquals(expected, actual)
 
     def test_print_diamond_push_B_line_1(self):
-        expected = "1A1"
-        actual = self.diamond.print_diamond(charecter="B", line=1)
+        expected = ".A."
+        actual = self.diamond.print_diamond(charecter="B")
         self.assertEquals(expected, actual)
 
     def test_print_diamond_push_C_line_1(self):
-        expected = "2A2"
-        actual = self.diamond.print_diamond(charecter="C", line=1)
+        expected = "..A.."
+        actual = self.diamond.print_diamond(charecter="C")
         self.assertEquals(expected, actual)
 
     def test_print_diamond_push_D_line_1(self):
-        expected = "3A3"
-        actual = self.diamond.print_diamond(charecter="D", line=1)
+        expected = "...A..."
+        actual = self.diamond.print_diamond(charecter="D")
+        self.assertEquals(expected, actual)
+
+    def test_print_diamond_push_E_line_1(self):
+        expected = "....A...."
+        actual = self.diamond.print_diamond(charecter="E")
         self.assertEquals(expected, actual)
