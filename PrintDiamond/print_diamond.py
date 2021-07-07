@@ -14,8 +14,13 @@ class Diamond:
             if line == 2:
                 return "B.B"
 
-        if charecter == "C" and line == 2:
-            return ".B.B."
+        if charecter == "C":
+            if line == 1:
+                return "..A.."
+            if line == 2:
+                return ".B.B."
+            if line == 3:
+                return "C...C"
 
         if charecter == "D":
             if line == 1:
