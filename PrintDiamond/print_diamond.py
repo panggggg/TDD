@@ -8,12 +8,24 @@ class Diamond:
             first_line = "." * int(number_space_of_first_line)
             return f"{first_line}A{first_line}"
 
-        if charecter == "B" and line == 2:
-            return "B.B"
+        if charecter == "B":
+            if line == 1:
+                return ".A."
+            if line == 2:
+                return "B.B"
+
         if charecter == "C" and line == 2:
             return ".B.B."
-        if charecter == "D" and line == 2:
-            return "..B.B.."
+
+        if charecter == "D":
+            if line == 1:
+                return "...A..."
+            if line == 2:
+                return "..B.B.."
+            if line == 3:
+                return ".C...C."
+            if line == 4:
+                return "D.....D"
 
     def count_space(self, charecter, type, line):
 
