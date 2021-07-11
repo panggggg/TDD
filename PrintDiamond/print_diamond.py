@@ -3,7 +3,7 @@ class Diamond:
 
         line_of_diamond = (ord(charecter) - 64) - (1 - (ord(charecter) - 64)) - 1
 
-        a = chr(((ord(charecter) - 1) * 2 + line) - (64 + line_of_diamond))
+        alphabet = chr(((ord(charecter) - 1) * 2 + line) - (64 + line_of_diamond))
 
         if line == 1:
             number_space_of_first_line = (ord(charecter) - 64) - 1
@@ -26,13 +26,13 @@ class Diamond:
 
         if charecter == "D":
             if line == 1:
-                return "...A..."
+                return f"...{alphabet}..."
             if line == 2:
-                return "..B.B.."
+                return f"..{alphabet}.{alphabet}.."
             if line == 3:
-                return f".{a}...{a}."
+                return f".{alphabet}...{alphabet}."
             if line == 4:
-                return f"{a}.....{a}"
+                return f"{alphabet}.....{alphabet}"
 
     def count_space(self, charecter, type, line):
 
