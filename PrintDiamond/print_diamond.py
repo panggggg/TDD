@@ -33,6 +33,12 @@ class Diamond:
         if charecter == "D":
             if line == 1:
                 return f"{space_left_right}{alphabet}{space_left_right}"
+            if line == 5:
+                return ".C...C."
+            if line == 6:
+                return "..B.B.."
+            if line == 7:
+                return "...A..."
             return f"{space_left_right}{alphabet}{space_middle}{alphabet}{space_left_right}"
 
     def count_space(self, charecter, type, line):
