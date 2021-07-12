@@ -1,5 +1,6 @@
+from random import random
 import unittest
-from fizzbuzz import fizzbuzz
+from fizzbuzz import call_fizzbuzz, fizzbuzz
 
 
 class FizzBuzzTest(unittest.TestCase):
@@ -61,4 +62,9 @@ class FizzBuzzTest(unittest.TestCase):
     def test_push_45_should_be_return_fizzbuzz(self):
         expected = "fizzbuzz"
         actual = fizzbuzz(num=45)
+        self.assertEquals(expected, actual)
+
+    def test_random_number_1_should_be_return_1(self):
+        expected = (1, "1")
+        actual = call_fizzbuzz()
         self.assertEquals(expected, actual)
