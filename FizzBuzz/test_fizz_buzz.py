@@ -1,16 +1,17 @@
 from random import random
 import unittest
 from fizzbuzz import call_fizzbuzz, fizzbuzz
+from unittest.mock import MagicMock, patch
 
 
 class FizzBuzzTest(unittest.TestCase):
     def test_push_1_should_be_return_1(self):
-        expected = 1
+        expected = "1"
         actual = fizzbuzz(num=1)
         self.assertEquals(expected, actual)
 
     def test_push_2_should_be_return_2(self):
-        expected = 2
+        expected = "2"
         actual = fizzbuzz(num=2)
         self.assertEquals(expected, actual)
 
@@ -20,7 +21,7 @@ class FizzBuzzTest(unittest.TestCase):
         self.assertEquals(expected, actual)
 
     def test_push_4_should_be_return_4(self):
-        expected = 4
+        expected = "4"
         actual = fizzbuzz(num=4)
         self.assertEquals(expected, actual)
 
@@ -35,7 +36,7 @@ class FizzBuzzTest(unittest.TestCase):
         self.assertEquals(expected, actual)
 
     def test_push_7_should_be_return_7(self):
-        expected = 7
+        expected = "7"
         actual = fizzbuzz(num=7)
         self.assertEquals(expected, actual)
 
@@ -64,7 +65,9 @@ class FizzBuzzTest(unittest.TestCase):
         actual = fizzbuzz(num=45)
         self.assertEquals(expected, actual)
 
-    def test_random_number_1_should_be_return_1(self):
+    @patch("random.random")
+    def test_random_number_1_should_be_return_1(self, mock_random):
         expected = (1, "1")
+        mock_random.random.return_value = 0.01
         actual = call_fizzbuzz()
         self.assertEquals(expected, actual)
