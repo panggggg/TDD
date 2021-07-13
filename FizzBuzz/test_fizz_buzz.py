@@ -65,9 +65,30 @@ class FizzBuzzTest(unittest.TestCase):
         actual = fizzbuzz(num=45)
         self.assertEquals(expected, actual)
 
-    @patch("random.random")
+    @patch("fizzbuzz.random")
     def test_random_number_1_should_be_return_1(self, mock_random):
         expected = (1, "1")
-        mock_random.random.return_value = 0.01
+        mock_random.random = MagicMock(return_value=0.01)
+        actual = call_fizzbuzz()
+        self.assertEquals(expected, actual)
+
+    @patch("fizzbuzz.random")
+    def test_random_number_2_should_be_return_2(self, mock_random):
+        expected = (2, "2")
+        mock_random.random = MagicMock(return_value=0.02)
+        actual = call_fizzbuzz()
+        self.assertEquals(expected, actual)
+
+    @patch("fizzbuzz.random")
+    def test_random_number_3_should_be_return_fizz(self, mock_random):
+        expected = (3, "fizz")
+        mock_random.random = MagicMock(return_value=0.03)
+        actual = call_fizzbuzz()
+        self.assertEquals(expected, actual)
+
+    @patch("fizzbuzz.random")
+    def test_random_number_5_should_be_return_buzz(self, mock_random):
+        expected = (5, "buzz")
+        mock_random.random = MagicMock(return_value=0.05)
         actual = call_fizzbuzz()
         self.assertEquals(expected, actual)
