@@ -3,15 +3,13 @@ class Diamond:
 
         line_of_diamond = ord(charector) - 64 + (ord(charector) - 65)
 
-        
+        if line < (line_of_diamond + 1) / 2:
+            return ord(charector) - (64 + line)
         if charector == "B":
-            if line == 3:
-                return 1
+            return line - 2
         if charector == "C":
-            if line == 4:
-                return 1 
-            if line == 5:
-                return 2
+            return line - 3
         if charector == "D":
             return line - 4    
-        return ord(charector) - (64 + line)
+        return 0
+        
