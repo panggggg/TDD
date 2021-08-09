@@ -1,7 +1,7 @@
 class Diamond:
     def number_of_left_right(self, charector, line):
 
-        line_of_diamond = ord(charector) - 64 + (ord(charector) - 65)
+        line_of_diamond =  ord(charector) - 65 + ord(charector) - 64
 
         if line <= (line_of_diamond + 1) / 2:
             return ord(charector) - (64 + line)
