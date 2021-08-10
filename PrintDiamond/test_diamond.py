@@ -152,6 +152,11 @@ class TestDiamond(unittest.TestCase):
         actual = self.diamond.number_of_middle(charector="E", line=4)
         self.assertEquals(expected, actual)
 
+    def test_number_of_middle_push_E_line_5_should_be_return_7(self):
+        expected = 7
+        actual = self.diamond.number_of_middle(charector="E", line=5)
+        self.assertEquals(expected, actual)
+
     
 
     
