@@ -21,6 +21,7 @@ E.......E
 
 
 
+
 This is the print diamond for 'C'.
 
 ..A..

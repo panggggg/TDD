@@ -10,19 +10,9 @@ class Diamond:
             return line - order_of_alphabet  
 
     def number_of_middle(self, charector, line):
+
+        return line + (line - 3)
         
-        if line == 2:
-            return 2 - 1
-        if line == 3:
-            return 3 + 0
-        if line == 4:
-            return 4 + 1
-        if charector == "C":
-            return line + 0
-        if charector == "D":
-            return line + 1
-        if charector == "E":
-            return line + 2
 
     def _is_first_half(self, line, line_of_diamond):
         return line <= (line_of_diamond + 1) / 2
