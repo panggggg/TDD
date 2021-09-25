@@ -17,3 +17,10 @@ class TestTennis(unittest.TestCase):
         a_score = a.get_score("15")
         b_score = b.get_score("0")
         self.assertEquals(expected, f"{a_score} - {b_score}")
+
+    def test_add_point_player_get_score_15_0(self):
+        expected = "15 - 0"
+        a = Player("A")
+        b = Player("B")
+        a_point = a.add_point()
+        self.assertEquals(expected, f"{a_point} - {b.point}")
