@@ -30,3 +30,9 @@ class Scorer:
     def get_point(self, point):
         if point == 0:
             return "Lover"
+        if point == 15:
+            return "Fifthteen"
+        if point == 30:
+            return "Thirty"
+        if point == 40:
+            return "Fourty"
