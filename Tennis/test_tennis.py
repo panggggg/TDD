@@ -14,5 +14,5 @@ class TestTennis(unittest.TestCase):
         expected = "15 - 0"
         a = Player("A")
         b = Player("B")
-        a_point = a.add_point()
-        self.assertEquals(expected, f"{a_point} - {b.point}")
+        a.add_point()
+        self.assertEquals(expected, f"{a.get_score()} - {b.point}")
