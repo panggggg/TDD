@@ -13,4 +13,10 @@ class Player:
         self.point += 1
         return self.point
 
-
+class Scorer:
+    def __init__(self, player1, player2):
+        self.player1 = player1
+        self.player2 = player2
+    def get_score(self):
+        if self.player1.get_score() == 45:
+            return "Winner is A"
