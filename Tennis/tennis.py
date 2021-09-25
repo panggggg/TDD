@@ -11,4 +11,6 @@ class Player:
 
     def add_point(self):
         self.point += 1
+        return self.point
+
 
