@@ -22,3 +22,5 @@ class Scorer:
             return "Winner is A"
         if self.player2.get_score() == 45:
             return "Winner is B"
+        if self.player1.get_score() == 40 and self.player2.get_score() == 40:
+            return "Deuce"
