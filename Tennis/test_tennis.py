@@ -1,5 +1,5 @@
 import unittest
-from tennis import Player
+from tennis import Player, Scorer
 
 class TestTennis(unittest.TestCase):
     def test_player_get_score_0_0(self):
@@ -33,7 +33,7 @@ class TestTennis(unittest.TestCase):
         self.assertEquals(expected, f"{a.get_score()} - {b.get_score()}")
 
     def test_scorer_player_A_is_winner(self):
-        expected = "45 - 0"
+        expected = "Winner is A"
         a = Player("A")
         b = Player("B")
         a.add_point()
