@@ -6,6 +6,14 @@ class TestTennis(unittest.TestCase):
         expected = "0 - 0"
         a = Player("A")
         b = Player("B")
-        score_a = a.get_score("0")
-        score_b = b.get_score("0")
-        self.assertEquals(expected, f"{score_a} - {score_b}")
+        a_score = a.get_score("0")
+        b_score = b.get_score("0")
+        self.assertEquals(expected, f"{a_score} - {b_score}")
+
+    def test_player_get_score_15_0(self):
+        expected = "15 - 0"
+        a = Player("A")
+        b = Player("B")
+        a_score = a.get_score("15")
+        b_score = b.get_score("0")
+        self.assertEquals(expected, f"{a_score} - {b_score}")
