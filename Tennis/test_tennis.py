@@ -31,3 +31,16 @@ class TestTennis(unittest.TestCase):
         a.add_point()
         b.add_point()
         self.assertEquals(expected, f"{a.get_score()} - {b.get_score()}")
+
+    def test_scorer_player_A_is_winner(self):
+        expected = "45 - 0"
+        a = Player("A")
+        b = Player("B")
+        a.add_point()
+        a.add_point()
+        a.add_point()
+        a.add_point()
+        score = Scorer(a, b)
+        self.assertEquals(expected, score.get_score())
+
+    
