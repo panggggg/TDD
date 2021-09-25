@@ -24,3 +24,9 @@ class Scorer:
             return "Winner is B"
         if self.player1.get_score() == 40 and self.player2.get_score() == 40:
             return "Deuce"
+        else:
+            return f"{self.get_point(self.player1.get_score())} - {self.get_point(self.player2.get_score())}"
+    
+    def get_point(self, point):
+        if point == 0:
+            return "Lover"
