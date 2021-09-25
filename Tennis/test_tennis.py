@@ -73,4 +73,12 @@ class TestTennis(unittest.TestCase):
         b = Player("B")
         score = Scorer(a, b)
         self.assertEquals(expected, score.get_score())
+
+    def test_get_point_15_0_should_be_return_fifthteen_lover(self):
+        expected = "Fifthteen - Lover"
+        a = Player("A")
+        b = Player("B")
+        a.add_point()
+        score = Scorer(a, b)
+        self.assertEquals(expected, score.get_score())
     
